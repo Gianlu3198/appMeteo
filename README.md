@@ -81,37 +81,6 @@ Gestisce la cache in memoria:
 #### HttpClientConfig
 Configura un bean HttpClient utilizzato per le chiamate HTTP.
 
----
-
-### Frontend
-
-Frontend minimale sviluppato senza framework.
-
-Tecnologie:
-- HTML
-- CSS
-- JavaScript (fetch API)
-
-Funzionamento:
-- input per inserire la città
-- bottone per avviare la ricerca
-- chiamata HTTP al backend
-- visualizzazione dei dati ricevuti
-
-Esempio funzione JavaScript:
-
-- invia richiesta a:
-  http://localhost:8080/meteo/{citta}
-- riceve JSON
-- aggiorna il DOM con i dati
-
-Gestione errori:
-- controllo response.ok
-- gestione campo errore restituito dal backend
-- fallback con messaggio generico
-
----
-
 ## API utilizzate
 
 Open-Meteo:
@@ -127,13 +96,6 @@ Open-Meteo:
 1. Avviare l'applicazione Spring Boot
 2. Server disponibile su:
    http://localhost:8080
-
-### Frontend
-
-1. Aprire il file index.html nel browser
-2. Oppure usare Live Server su VS Code
-
----
 
 ## Esempio di utilizzo
 
@@ -155,21 +117,14 @@ Il backend genera errori nei seguenti casi:
 - città non trovata → "Città non trovata"
 - errore API → "Errore API geocoding" / "Errore API meteo"
 
-Il frontend intercetta:
-- errori HTTP
-- risposta non valida
-- campi undefined
-
 ---
 
 ## Possibili miglioramenti
 
-- UI più avanzata (CSS, icone meteo)
 - storico ricerche
 - supporto geolocalizzazione
 - test automatizzati più completi
 - gestione errori con codici HTTP più precisi
-- integrazione con framework frontend (Angular, React)
 
 ---
 
